@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<robot name="robot_arm">
+
+    <!-- base link -->
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="-0.045 0.045 0" rpy="1.5708 0 0" />
+            <geometry>
+                <!-- <cylinder length="0.1" radius="0.05"/>  -->
+                <mesh
+                    filename="package://robot_description/meshes/Part1.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+
+        <collision>
+            <origin xyz="-0.045 0.045 0" rpy="1.5708 0 0" />
+            <geometry>
+                <!-- <cylinder length="0.1" radius="0.1"/>  -->
+                <!-- <mesh
+                    filename="package://robot_description/meshes/Roboti_algus - roomuk-1 Part1.STL"
+                    scale="10 10 10" /> -->
+                <mesh
+                    filename="package://robot_description/meshes/Part1.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+
+    <!-- link 1 -->
+    <link name="link1">
+        <visual>
+            <origin xyz="-0.03 0.03 0" rpy="1.5708 0 0" />
+            <geometry>
+                <mesh
+                    filename="package://robot_description/meshes/Part2.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="blue">
+                <color rgba="0.0 0.0 1.0 1.0" /> <!-- Blue color -->
+            </material>
+        </visual>
+
+        <collision>
+            <origin xyz="-0.03 0.03 0" rpy="1.5708 0 0" />
+            <geometry>
+                <mesh
+                    filename="package://robot_description/meshes/Part2.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+    </link>
+
+    <!--joint1-->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link" />
+        <child link="link1" />
+        <origin xyz="0 0 0.06" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.1416" effort="100" velocity="1" />
+    </joint>
+
+    <!-- link 2 -->
+    <link name="link2">
+        <visual>
+            <!-- 1.5708 -->
+            <origin xyz="0.02 0.15 0.08" rpy="-1.5708 0 3.1416" />
+            <geometry>
+                <mesh
+                    filename="package://robot_description/meshes/Part6.5 real.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="green">
+                <color rgba="0.0 1.0 0.0 1.0"/>
+            </material>
+        </visual>
+
+        <collision>
+            <origin xyz="0.02 0.15 0.08" rpy="-1.5708 0 3.1416" />
+            <geometry>
+                <!-- <box size="0.1 0.1 0.1" /> -->
+                <mesh
+                    filename="package://robot_description/meshes/Part6.5 real.STL"
+                    scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1" />
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001" />
+        </inertial>
+    </link>
+
+    <!--joint2-->
+    <joint name="joint2" type="prismatic">
+        <parent link="link1" />
+        <child link="link2" />
+        <origin xyz="0.105 0 0.0175" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="0.02" effort="100" velocity="1" />
+    </joint>
+
+</robot>
