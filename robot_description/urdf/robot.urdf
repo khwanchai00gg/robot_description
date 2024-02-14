@@ -71,10 +71,10 @@
     <link name="link2">
         <visual>
             <!-- 1.5708 -->
-            <origin xyz="0.02 0.15 0.08" rpy="-1.5708 0 3.1416" />
+            <origin xyz="-0.115 -0.017 -0.03" rpy="1.5708 0 1.5708" />
             <geometry>
                 <mesh
-                    filename="package://robot_description/meshes/Part6.5 real.STL"
+                    filename="package://robot_description/meshes/Part6.6.STL"
                     scale="0.001 0.001 0.001" />
             </geometry>
             <material name="green">
@@ -83,11 +83,11 @@
         </visual>
 
         <collision>
-            <origin xyz="0.02 0.15 0.08" rpy="-1.5708 0 3.1416" />
+            <origin xyz="-0.115 -0.017 -0.03" rpy="1.5708 0 1.5708" />
             <geometry>
                 <!-- <box size="0.1 0.1 0.1" /> -->
                 <mesh
-                    filename="package://robot_description/meshes/Part6.5 real.STL"
+                    filename="package://robot_description/meshes/Part6.6.STL"
                     scale="0.001 0.001 0.001" />
             </geometry>
         </collision>
@@ -105,7 +105,7 @@
         <child link="link2" />
         <origin xyz="0.105 0 0.0175" rpy="0 0 0" />
         <axis xyz="1 0 0" />
-        <limit lower="0" upper="0.02" effort="100" velocity="1" />
+        <limit lower="0" upper="0.022" effort="100" velocity="1" />
     </joint>
 
 </robot>
