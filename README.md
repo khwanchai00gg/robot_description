@@ -1,4 +1,4 @@
-# robot_description
+# RP Potentiometer 2 joint robot
 robot arm 2joint project
 
 
@@ -34,7 +34,9 @@ and connect Arduino to your computer
 
 # Required Software 
 Arduino IDE ( Link https://www.arduino.cc/en/software )
+
 ROS on Ubuntu (We use ROS noetic you can follow this step to install them https://wiki.ros.org/noetic/Installation/Ubuntu )
+
 Arvis on Ubuntu  (This is how to install them with ROS noetic http://wiki.ros.org/rviz/UserGuide )
 
 
@@ -77,7 +79,10 @@ go back to your package files and use this in the terminal
  catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
-If all is done open a new terminal and then
+
+# Launch the Robot
+
+Open terminal and put this command
 
 ```ruby
  roscore
