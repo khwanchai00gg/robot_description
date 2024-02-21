@@ -73,7 +73,7 @@ go back to your package files and use this in the terminal
  chmod +x robot.urdf
  sudo chmod a+rw /dev/ <your USB port name>
 ```
--go back to catkin_ws and
+- go back to catkin_ws and
 
 ```ruby
  catkin_make
