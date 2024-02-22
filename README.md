@@ -108,6 +108,10 @@ Everything should be work here
 
 When everything works it will show up Avriz and GUI, Avriz will show how your robot properly moves if you control the robot either with GUI or Potentiometer
 
+![Screenshot 2024-02-22 105152](https://github.com/khwanchai00gg/robot_description/assets/156043362/ab7ab830-6a6c-4b49-98b8-7b1e6a7054be)
+
+![Screenshot 2024-02-22 105134](https://github.com/khwanchai00gg/robot_description/assets/156043362/e36d9c9b-7cca-4b70-9883-1a51fa67a91e)
+
 ![Screenshot 2024-02-22 104146](https://github.com/khwanchai00gg/robot_description/assets/54237112/388cfc9d-b543-4f89-ba89-4170a4723116)
 
 ![Screenshot 2024-02-22 104516](https://github.com/khwanchai00gg/robot_description/assets/54237112/03ac814c-2e16-4f60-9b37-c734c632005c)
