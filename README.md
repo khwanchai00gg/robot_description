@@ -19,7 +19,7 @@ You will see that the meshes folder will have the STL files for the robot (https
 you can print and assemble them with those parts or with your design.
 
 Put all the Hardware GND wires connected to the same wire connect
-Put all the Hardware Vin wires connected to the same wire and one wire in the 5V on the Arduino board (If you use another kind of servo that needs more than 5V you have to connect them to the voltage you have used)
+Put all the Hardware Vin wires connected to the same wire and one wire to the 6volt power source (If you use another kind of servo that needs more than 6V you have to connect them to the voltage you have used)
 **Do not connect wires while you turn the power on
 
 You can define where the pin with this data sheet if you use Arduino UNO R3 https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf
@@ -33,11 +33,11 @@ The Signal wire on the P servo was put in the pot Pin 10
 and connect Arduino to your computer
 
 # Required Software 
-Arduino IDE ( Link https://www.arduino.cc/en/software )
+- Arduino IDE ( Link https://www.arduino.cc/en/software )
 
-ROS on Ubuntu (We use ROS noetic you can follow this step to install them https://wiki.ros.org/noetic/Installation/Ubuntu )
+- ROS on Ubuntu (We use ROS noetic you can follow this step to install them https://wiki.ros.org/noetic/Installation/Ubuntu )
 
-Arvis on Ubuntu  (This is how to install them with ROS noetic http://wiki.ros.org/rviz/UserGuide )
+- Rvis on Ubuntu  (This is how to install them with ROS noetic http://wiki.ros.org/rviz/UserGuide )
 
 
 # Set up before launch
@@ -82,7 +82,7 @@ source ~/catkin_ws/devel/setup.bash
 
 # Launch the Robot
 
-Open terminal and put this command
+Open the terminal and put this command
 
 ```ruby
  roscore
@@ -94,6 +94,15 @@ Then open another terminal go to your workspace and
 ```
 to launch the robot
 
+#RQT graph
+You can check the node of ROS system while you active the robot with 
+```ruby
+ rqt_grph
+
+```
+Then you may see like this
+
+![RQT](https://github.com/khwanchai00gg/robot_description/assets/156043362/8e1a341e-988f-4c5c-a3bb-b95a9d1bfea1)
 
 Everything should be work here
 
